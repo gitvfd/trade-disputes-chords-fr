@@ -304,7 +304,7 @@ function DrawInit(){
 		.transition().duration(700)
 		.attr("opacity", 0);
 
-	changeTopText(newText = "Cette infographie détaille les plaintes en cours relatives aux restrictions tarifaires et commerciales déposées à l'OMC depuis 2017.",
+	changeTopText(newText = "Cette infographie détaille les plaintes en cours relatives aux mesures tarifaires et autres restrictions au commerce déposées à l'OMC depuis 2017.",
 		loc = 1 / 2, delayDisappear = 0, delayAppear = 1, finalText = true);
 
 
@@ -408,7 +408,7 @@ function Draw3(){
 
 	/*Change the text of the top section inside the circle accordingly*/
 	/*between 1 and 5 disputes*/
-	changeTopText(newText = "D'autres pays ont entamé entre un et quatre différends.",
+	changeTopText(newText = "D'autres pays ont initié entre un et quatre différends.",
         loc = 1/2, delayDisappear = 0, delayAppear = 1);
 	/*0 disputes*/
 	changeTopText(newText = "Huit pays répondent à des différends mais n’en ont pas initié.",
@@ -579,7 +579,7 @@ function Draw8(){
 	/*Show and run the progressBar*/
 	runProgressBar(time=700*2);	
 	
-	changeTopText(newText = "Dans les conflits bilatéraux, le ruban prend la couleur du pays qui a initié le plus de différends.",
+	changeTopText(newText = "Dans les différends bilatéraux, le ruban prend la couleur du pays qui a initié le plus de différends.",
 		loc = 2/2, delayDisappear = 0, delayAppear = 1, finalText = true);
 		
 	/*Remove the Nokia arc*/
