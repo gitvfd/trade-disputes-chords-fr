@@ -2,7 +2,7 @@
 ////////////////// Set up the Data /////////////////////////
 //////////////////////////////////////////////////////////*/
 
-var NameProvider = ["United States", "China", "EU", "Russia", "Ukraine", "Canada", "Japan", "Korea", "Tunisia", "Turkey", "Argentina", "Brazil", "Chinese Taipei", "India", "Indonesia", "Mexico", "Norway", "Switzerland", "Thailand", "UAE", "Venezuela", "Viet Nam", "Armenia", "Australia", "Costa Rica", "Kazakhstan", "Kyrgyz Rep.", "Morocco", "Pakistan", "Peru"];
+var NameProvider = ["États-Unis", "Chine", "UE", "Russie", "Ukraine", "Canada", "Japon", "Corée", "Tunisie", "Turquie", "Argentine", "Brésil", "Taipei chinois", "Inde", "Indonésie", "Mexique", "Norvège", "Suisse", "Thaïlande", "EAU", "Venezuela", "Viet Nam", "Arménie", "Australie", "Costa Rica", "Kazakhstan", "Kirghizistan", "Maroc", "Pakistan", "Pérou"];
 	
 var matrix = [
     [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -247,7 +247,7 @@ var middleTextBottom = textCenter.append("text")
 //////////////////////////////////////////////////////////*/
 
 var counter = 0,
-	buttonTexts = ["Click to start", "Next", "Next", "Next", "Next", "Next", "Next", "Finish"],
+	buttonTexts = ["Commencez", "Suivant", "Suivant", "Suivant", "Suivant", "Suivant", "Suivant", "Terminer"],
 	opacityValueBase = 0.8,
 	opacityValue = 0.4;
 
@@ -304,7 +304,7 @@ function DrawInit(){
 		.transition().duration(700)
 		.attr("opacity", 0);
 
-	changeTopText(newText = "This infographic presents a breakdown of outstanding tariff and trade restriction complaints to the WTO since 2017.",
+	changeTopText(newText = "Cette infographie présente une ventilation des plaintes en instance relatives aux droits de douane et aux restrictions commerciales déposées à l'OMC depuis 2017.",
 		loc = 1 / 2, delayDisappear = 0, delayAppear = 1, finalText = true);
 
 
@@ -358,7 +358,7 @@ function Draw2(){
 		.attr("opacity", function (d, i) { return (d.index == 0 || d.index == 1) ? 1  : 0; });
 	  
 	/*Switch  text*/
-	changeTopText(newText = "These two countries are involved into five disputes.",
+	changeTopText(newText = "Ces deux pays sont impliqués dans cinq différends.",
 	loc = 1/2, delayDisappear = 0, delayAppear = 1, finalText = true);
 	
     changeBottomText(newText = "",
@@ -408,10 +408,10 @@ function Draw3(){
 
 	/*Change the text of the top section inside the circle accordingly*/
 	/*between 1 and 5 disputes*/
-	changeTopText(newText = "Other countries have initiated between one and four disputes.",
+	changeTopText(newText = "D'autres pays ont entamé entre un et quatre différends.",
         loc = 1/2, delayDisappear = 0, delayAppear = 1);
 	/*0 disputes*/
-	changeTopText(newText = "Eight countries are just responding to disputes but have not issued any.",
+	changeTopText(newText = "Huit pays ne font que réagir aux différends mais n'en ont initié aucun.",
 		loc = 1 / 2, delayDisappear = (arcDelay[22] - 1), delayAppear = arcDelay[22], finalText = true);
     /*0 dispute%*/
     //changeTopText(newText = "8 countries are just responding to disputes but haven't issued any",
@@ -433,7 +433,7 @@ function Draw4(){
 	runProgressBar(time=700*2);	
 	
 	/*Samsung and Nokia intro text*/
-	changeTopText(newText = "Let's focus on one dispute.",
+	changeTopText(newText = "Concentrons-nous sur un différend.",
 		loc = 0, delayDisappear = 0, delayAppear = 1, finalText = true);
 		
 	/*Bottom text disappear*/
@@ -479,7 +479,7 @@ function Draw5(){
 	runProgressBar(time=700*2);	
 	
 	/*Samsung and Nokia text*/
-	changeTopText(newText = "Looking at one end of the arc, we see two disputes have been initiated by this country aginst the other.",
+	changeTopText(newText = "À un bout de l'arc, nous voyons que ce pays a inité deux différends contre l'autre.",
 		loc = 0, delayDisappear = 0, delayAppear = 1, finalText = true);
 	
     /*Make the non Samsung & Nokia arcs less visible*/
@@ -527,7 +527,7 @@ function Draw6(){
 	runProgressBar(time=700*2);	
 	
 	/*Samsung and Nokia text*/
-	changeTopText(newText = "The other country has initiated just one dispute. The chord is the color of the country that has initiated more disputes.",
+	changeTopText(newText = "L’autre pays n’a initié qu’un seul différend. La corde est de la couleur du pays qui a initié le plus de conflits.",
         loc = 0, delayDisappear = 0, delayAppear = 1, finalText = true);
 		
 	/*Stop the color changing on the Samsung side*/
@@ -579,7 +579,7 @@ function Draw8(){
 	/*Show and run the progressBar*/
 	runProgressBar(time=700*2);	
 	
-	changeTopText(newText = "These are all the chords for disputes involving one country as complainant or respondent.",
+	changeTopText(newText = "Ce sont tous les différends impliquant un pays en tant que plaignant ou défendeur.",
 		loc = 3/2, delayDisappear = 0, delayAppear = 1, finalText = true);
 		
 	/*Remove the Nokia arc*/
@@ -589,7 +589,7 @@ function Draw8(){
         .each("end", function() {d3.selectAll(".NokiaLoyalArc").remove();});
     
 
-	changeBottomText(newText = "Click \"Finish\" and hover over the border of the circle to get more details.",
+	changeBottomText(newText = "Cliquez \"Terminer\" et passer la souris sur les bordures du cercle pour plus d'information.",
 		loc = 10/4 , delayDisappear = 0, delayAppear = 1);
 			
 	/*Only show the chords of Apple*/
