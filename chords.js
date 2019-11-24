@@ -46,13 +46,15 @@ var colors = ['#612794','#04629a','#0bb89c','#0bb89c','#0bb89c','#90bd79', '#90b
 var fill = d3.scale.ordinal()
     .domain(d3.range(NameProvider.length))
     .range(colors);
-	
+
+var test = Math.min(700, window.innerWidth)
+var test2 = Math.min(500, 5/7*window.innerWidth)
 /*//////////////////////////////////////////////////////////
 /////////////// Initiate Chord Diagram /////////////////////
 //////////////////////////////////////////////////////////*/
 var margin = {top: 30, right: 25, bottom: 10, left: 25},
-    width =700 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
+	width = test - margin.left - margin.right,
+	height = test2 - margin.top - margin.bottom,
     innerRadius = Math.min(width, height) * .39,
     outerRadius = innerRadius * 1.04;
 
